@@ -11,5 +11,5 @@ exports.registerUser = async (req, res, next) => {};
 // Login User
 exports.loginUser = async (req, res, next) => {};
 
-// Get User Infors
+// Get User Info
 exports.getUserInfo = async (req, res, next) => {};

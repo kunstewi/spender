@@ -21,3 +21,7 @@
 - in the User.js file import mongoose and define the UserSchema function that defines the schema for the Users mainly fullName, email, Password, ProfileImage and add Timestamps
 
 - write a function to hash the password before saving in User.js then write the function to compare the hashed and the entered password to check matching during login
+
+- in the authController.js file import jsonwebtoke as jwt and write generateToken function that creates a jwt token for a session that expires in 1 hour, then write the async functions for registerUser, loginUser and getUserInfo and export those functions.
+
+- in the authRoute.js import these registerUser, loginUser and getUserInfo functions from authController.js and use express router to register and login user via post method and get method to get the user info at /register, /login, and /getUser
