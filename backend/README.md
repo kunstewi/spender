@@ -25,3 +25,5 @@
 - in the authController.js file import jsonwebtoke as jwt and write generateToken function that creates a jwt token for a session that expires in 1 hour, then write the async functions for registerUser, loginUser and getUserInfo and export those functions.
 
 - in the authRoute.js import these registerUser, loginUser and getUserInfo functions from authController.js and use express router to register and login user via post method and get method to get the user info at /register, /login, and /getUser
+
+- then start writing the logic for registerUser, first destructure the object for the req.body then do the validation check for missing fields then in a try catch block implement the logic for if the email already exists if it exists return email is already in use else register the user and generate a user id, and in the catch block return the status 500 with error message
