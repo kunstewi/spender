@@ -66,7 +66,7 @@ exports.loginUser = async (req, res) => {
   } catch (err) {
     res
       .status(500)
-      .json({ message: "Error registering user", error: err.message });
+      .json({ message: "email or password wrong", error: err.message });
   }
 };
 
@@ -78,9 +78,12 @@ exports.getUserInfo = async (req, res) => {
     if (!user) {
       return res.status(400).json({ message: "User not found" });
     }
+
+    return res.status(200).json({ user });
   } catch (err) {
-    res
-      .status(500)
-      .json({ message: "Error registering user", error: err.message });
+    return res.status(500).json({
+      message: "Error getting user",
+      error: err.message,
+    });
   }
 };
